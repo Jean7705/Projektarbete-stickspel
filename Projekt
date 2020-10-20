@@ -100,18 +100,18 @@ namespace Projektarbete_Stickspel
         }
 
       //Hanterar drag från spelare
-            
-            while (true)
+      
+                  while (true)
             { 
 
                 Console.WriteLine("Please enter the number for which bundle you would like to take sticks from:" +
                                "\n" + "(Bundle 1, 2 or 3)");
 
-            static void PrintStickor(int iterations)
+            static void PrintStickor(int Iterations)
             {
                 Console.Write("\n" + "Here is the amount of sticks left:" + "\n");
 
-                for (int i = 1; i <= iterations; i++)
+                for (int i = 1; i <= Iterations; i++)
                 {
                     Console.Write("|");
                 }
@@ -121,20 +121,20 @@ namespace Projektarbete_Stickspel
             }
 
 
-                int.TryParse(Console.ReadLine(), out int input);
+                int.TryParse(Console.ReadLine(), out int Input);
 
-                switch (input)
+                switch (Input)
 
 
                 {
                     case 1:
-                        Console.Write("Please enter the number of how many sticks you take from number " + input +
+                        Console.Write("Please enter the number of how many sticks you take from number " + Input +
                         "\n" + "There are 5 sticks in each bundle to start with" +
                           "\n" + "Type number here and click enter: ");
-                        int.TryParse(Console.ReadLine(), out int inputOne);
-                        int RemainStickorOne = 5 - inputOne;
+                        int.TryParse(Console.ReadLine(), out int InputOne);
+                        int RemainStickorOne = 5 - InputOne;
 
-                        if (inputOne <= 0 || inputOne > 5)
+                        if (InputOne <= 0 || InputOne > 5)
                         {
                             Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
                         }
@@ -146,13 +146,13 @@ namespace Projektarbete_Stickspel
 
 
                     case 2:
-                        Console.Write("Please enter the number of how many sticks you take from number " + input +
+                        Console.Write("Please enter the number of how many sticks you take from number " + Input +
                         "\n" + "There are 5 sticks in each bundle to start with" +
                           "\n" + "Type number here and click enter: ");
-                        int.TryParse(Console.ReadLine(), out int inputTwo);
-                        int RemainStickorTwo = 5 - inputTwo;
+                        int.TryParse(Console.ReadLine(), out int InputTwo);
+                        int RemainStickorTwo = 5 - InputTwo;
 
-                        if (inputTwo <= 0 || inputTwo > 5)
+                        if (InputTwo <= 0 || InputTwo > 5)
                         {
                             Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
                         }
@@ -164,13 +164,13 @@ namespace Projektarbete_Stickspel
 
 
                     case 3:
-                        Console.Write("Please enter the number of how many sticks you take from number " + input +
+                        Console.Write("Please enter the number of how many sticks you take from number " + Input +
                         "\n" + "There are 5 sticks in each bundle to start with" +
                         "\n" + "Type number here and click enter: ");
-                        int.TryParse(Console.ReadLine(), out int inputThree);
-                        int RemainStickorThree = 5 - inputThree;
+                        int.TryParse(Console.ReadLine(), out int InputThree);
+                        int RemainStickorThree = 5 - InputThree;
 
-                        if (inputThree <= 0 || inputThree > 5)
+                        if (InputThree <= 0 || InputThree > 5)
                         {
                             Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
                         }
@@ -188,8 +188,8 @@ namespace Projektarbete_Stickspel
                 }
 
             }
-
-
+      
+  
     }
 }
 
