@@ -99,7 +99,95 @@ namespace Projektarbete_Stickspel
 
         }
 
+      //Hanterar drag från spelare
+            
+            while (true)
+            { 
 
+                Console.WriteLine("Please enter the number for which bundle you would like to take sticks from:" +
+                               "\n" + "(Bundle 1, 2 or 3)");
+
+            static void PrintStickor(int iterations)
+            {
+                Console.Write("\n" + "Here is the amount of sticks left:" + "\n");
+
+                for (int i = 1; i <= iterations; i++)
+                {
+                    Console.Write("|");
+                }
+
+                Console.WriteLine();
+
+            }
+
+
+                int.TryParse(Console.ReadLine(), out int input);
+
+                switch (input)
+
+
+                {
+                    case 1:
+                        Console.Write("Please enter the number of how many sticks you take from number " + input +
+                        "\n" + "There are 5 sticks in each bundle to start with" +
+                          "\n" + "Type number here and click enter: ");
+                        int.TryParse(Console.ReadLine(), out int inputOne);
+                        int RemainStickorOne = 5 - inputOne;
+
+                        if (inputOne <= 0 || inputOne > 5)
+                        {
+                            Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
+                        }
+                        else
+                        {
+                            PrintStickor(RemainStickorOne);
+                        }
+                        break;
+
+
+                    case 2:
+                        Console.Write("Please enter the number of how many sticks you take from number " + input +
+                        "\n" + "There are 5 sticks in each bundle to start with" +
+                          "\n" + "Type number here and click enter: ");
+                        int.TryParse(Console.ReadLine(), out int inputTwo);
+                        int RemainStickorTwo = 5 - inputTwo;
+
+                        if (inputTwo <= 0 || inputTwo > 5)
+                        {
+                            Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
+                        }
+                        else
+                        {
+                            PrintStickor(RemainStickorTwo);
+                        }
+                        break;
+
+
+                    case 3:
+                        Console.Write("Please enter the number of how many sticks you take from number " + input +
+                        "\n" + "There are 5 sticks in each bundle to start with" +
+                        "\n" + "Type number here and click enter: ");
+                        int.TryParse(Console.ReadLine(), out int inputThree);
+                        int RemainStickorThree = 5 - inputThree;
+
+                        if (inputThree <= 0 || inputThree > 5)
+                        {
+                            Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
+                        }
+                        else
+                        {
+                            PrintStickor(RemainStickorThree);
+                        }
+                        break;
+
+                    default:
+
+                        Console.Write("Incorrect input, please enter a number between 1 and 3" + "\n");
+                        break;
+
+                }
+
+            }
 
 
     }
