@@ -96,11 +96,42 @@ namespace Projektarbete_Stickspel
 
             return choise;
 
+            //Hanterar drag från spelare
+            {
+
+                Console.Write("Please enter the number of how many sticks you take " +
+                   "\n" + "There are 5 sticks in each bundle to start with" +
+                   "\n" + "Type number here and click enter: ");
+                int.TryParse(Console.ReadLine(), out int input);
+                int RemainStickor = 5 - input;
+
+                        if (input <= 0 || input > 5)
+                        {
+                            Console.WriteLine("Incorrect input! Choose a number between 1 and 5" + "\n");
+                        }
+                        else
+                        {
+                            PrintStickor(RemainStickor);
+                        }
+              }
+
+
+
+                    static void PrintStickor(int iterations)
+                    {
+                        Console.Write("Here is the amount of sticks left:" + "\n");
+
+                        for (int i = 1; i <= iterations; i++)
+                        {
+                            Console.Write("|");
+                        }
+
+
+                        Console.WriteLine();
+                    }
+
 
         }
-
-
-
 
     }
 }
